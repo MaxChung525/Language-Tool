@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Translation Editor</title>
+    <link rel="stylesheet" href="translate.css">
+    <link rel="icon" href="assets/logo2.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.wonderland.com.tw/" target="_blank">
+            <img src="assets/logo1.png" alt="logo" title="Wonderland" class="logo">
+        </a>
+        <h1>CSV Translation Editor</h1>
+        <div class="file-input-wrapper">
+            <div class="button-group">
+                <label for="csvFileInput" class="file-input-label">Choose Files</label>
+                <input type="file" id="csvFileInput" accept=".csv" multiple class="file-input-hidden">
+                <!-- The folder button will be added by JavaScript -->
+            </div>
+            <div id="fileNameDisplay"></div>
+        </div>
+        <div class="column-width-control">
+            <label>Column Width:</label>
+            <select id="columnWidthSelector" disabled>
+                <option value="narrow">Narrow</option>
+                <option value="normal" selected>Normal</option>
+                <option value="wide">Wide</option>
+            </select>
+        </div>
+        <div id="placeholderImage">
+            <img src="assets/image1.png" alt="Placeholder" class="placeholder-img">
+        </div>
+        <div id="csvContents"></div>
+        <div class="button-container">
+            <button id="previewButton" disabled>Preview</button>
+            <button id="saveButton" disabled>Save Changes</button>
+        </div>
+    </div>
+    <script src="translate.js"></script>
+</body>
+</html>
